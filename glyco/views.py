@@ -105,4 +105,4 @@ def convert_glyco_excel(request):
       return response
     
   else:
-    return HttpResponse('Hello World')
+    return HttpResponse('Heron Data Copyright 2025')
