@@ -9,6 +9,7 @@ env:
   DOCKER_HUB_USERNAME: ${{secrets.DOCKER_USERNAME}}
   DOCKER_KEY: ${{secrets.DOCKERHUB_KEY}}
   IMAGE_NAME: heron-api-server
+  GITHUB_TOKEN: ${{secrets.HERON_TOKEN}}
 
 jobs:
   build-and-deploy:
@@ -40,6 +41,7 @@ jobs:
         name: changing heron-redux helm
         with:
           repository: 'Step-henC/heron-redux'
+          token: ${{env.GITHUB_TOKEN}}
       - name: modify env
         run: |
           git config --global user.name 'Github Actions'
