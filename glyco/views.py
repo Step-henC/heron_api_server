@@ -95,6 +95,7 @@ def convert_glyco_excel(request):
                 worksheet.insert_chart("H"+str(colValIterator+5), chart)
                 colValIterator += 1
       writer.close()
+      #rewind file
       buffer.seek(0)
       filename = 'sample-sheets.xlsx'
       response = HttpResponse(
