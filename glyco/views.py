@@ -7,7 +7,9 @@ import xlsxwriter
 import io
 from django.views.decorators.csrf import csrf_exempt
 import json
-# Create your views here.
+
+def index(request):
+  return HttpResponse("Heron Data API Server")
 
 def parseSialicAcidFromString(proteinNameString):
     if re.search('^SA[0-9]', proteinNameString):
